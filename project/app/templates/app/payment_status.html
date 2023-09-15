@@ -1,0 +1,19 @@
+{% extends 'app/index.html' %}
+
+{% block one %}
+
+<div class="payment-container">
+    {% if status %}
+        <h2 class="payment-status">Thank you. Your payment was successful.</h2>
+    {% else %}
+        <h2 class="payment-status">Your Payment has failed! Please try again.</h2>
+    {% endif %}
+    <div class="text-center">
+        <a href="{% url 'make_payment' %}" class="custom-button">
+            <h3>Buy another one</h3>
+        </a>
+    </div>
+</div>
+
+
+ {% endblock %}

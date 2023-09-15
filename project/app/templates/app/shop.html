@@ -1,0 +1,44 @@
+{% extends 'app/index.html' %}
+
+{% block one %}
+
+<form method="POST" action="">
+{% csrf_token %}
+<div class="price-filter">
+    <input type="number" class="min-input" placeholder="min" name="min">
+  <input type="number" class="max-input" placeholder="max" name="max">    
+    <button class="submit-button">Submit</button>
+</div>
+</form>
+<h1 style="color: #171818; font-size: 24px; font-weight: bold; text-align: center;">Airdopes</h1>
+<div class="item-container">
+    {% for i in data %}
+        <div class="item">
+            <img src="{{ i.image.url }}" alt="">
+            <p> Name: {{ i.name }}</p>
+            <p>Price: {{ i.price }}</p>
+            <p>In Stock: {{ i.quantity }}</p>
+            <p>Description: {{ i.desc }}</p>
+            
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="number" name="req_quan" placeholder="Enter Quantity">
+                <input type="hidden" name="instock" value="{{ i.quantity }}">
+                <input type="hidden" name="idproduct" value="{{ i.id }}">
+                <input type="submit" value="Add to cart">
+            </form>
+            
+            {% if id == i.id %} {{ msg }} {% endif %}
+        </div>
+    {% endfor %}
+</div>
+<div class="content">
+    <ul class="pagination">
+        <li><a href="/shop/?page=1">1</a></li>
+        <li><a href="/shop/?page=2">2</a></li>
+        <li><a href="/shop/?page=3">3</a></li>
+    </ul>
+</div>
+
+
+{% endblock %}

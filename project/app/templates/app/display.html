@@ -1,0 +1,28 @@
+{% extends 'app/index.html' %}
+
+{% block one %}
+
+<div class="container">
+    <div class="product-list">
+        {% for i in data %}
+        <div class="product-item">
+            <img src="{{ i.image.url }}" alt="">
+            <p><strong>NAME:</strong> {{ i.name }}</p>
+            <p><strong>PRICE:</strong> ${{ i.price }}</p>
+            <p><strong>DESCRIPTION:</strong> {{ i.desc }}</p>
+            <p><strong>QUANTITY:</strong> {{ i.quantity }}</p>
+            <form action="{% url 'display' %}" method="post">
+                {% csrf_token %}
+                <input type="number" name="req_quan" placeholder="Enter Quantity">
+                <input type="hidden" name="instock" value="{{ i.quantity }}">
+                <input type="hidden" name="idproduct" value="{{ i.id }}">
+                <input type="submit" value="Add to cart">
+            </form>
+            {% if id == i.id %} {{ msg }} {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

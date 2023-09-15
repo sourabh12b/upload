@@ -1,0 +1,25 @@
+{% extends 'app/index.html' %}
+
+{% block one %}
+
+
+<div class="my-container">
+    <h2 class="my-heading">Contact Us</h2>
+    <form action="#" method="post" class="my-form">
+        {% csrf_token %}
+        <h1>{{msg}}</h1>
+        <label for="my-name">Name:</label>
+        <input type="text" id="my-name" name="my-name" required class="my-input">
+
+        <label for="my-email">Email:</label>
+        <input type="email" id="my-email" name="my-email" required class="my-input">
+
+        <label for="my-message">Message:</label>
+        <textarea id="my-message" name="my-message" required class="my-textarea"></textarea>
+
+        <input type="submit" value="Submit" class="my-submit-button">
+    </form>
+</div>
+
+
+{% endblock %}

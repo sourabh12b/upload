@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Ecommerce Navbar</title>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="#" style="font-family: 'Helvetica Neue', sans-serif; font-size:px; font-weight: bold; letter-spacing: -2px; color: #ff6f61; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); background-image: linear-gradient(45deg, #ff6f61, #ffbb73); -webkit-background-clip: text; color: transparent;">Aerobeats</a>
+    <ul class="nav-list">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li class="dropdown">
+            <a href="{% url 'shop' %}">Shop</a>
+        </li>
+        <li><a href="{% url 'mycart' %}">Cart</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'signup' %}">Signup</a></li>
+        <li><a href="{% url 'log' %}">Log in</a></li>
+        <li>
+            <form class="search">
+                <input type="search" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </li>
+    </ul>
+</nav>
+ 
+
+  {% block one %}
+
+<div class="image-container">
+    <img src="{% static 'images/Earbuds.jpg' %}" alt="Background Image">
+    <div class="content-overlay" style="color: black; margin-top: 40px;">
+      <h1 style="font-size: 36px; font-weight: bold; text-align: center; color: #55186f;">Grab it now!!!!</h1>
+      <p style="font-size: 18px; text-align: center; color: #333;">Get the most amazing experience in aridopes/earbuds collection.</p>
+      <a href="#" class="btn" style="display: block; width: 150px; margin: 0 auto; text-align: center; background-color: #55186f; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+        Explore Now</a>
+      
+    </div>
+  </div>
+
+  <!-- slider again -->
+
+  <!-- cards -->
+
+  <div class="carda">
+    <div class="card">
+        <div class="card1">
+            <img src="{% static 'images/sl1.webp' %}">
+            <h1>Wireless Freedom</h1>
+            <p>Explore our wireless Airdopes designed to keep you connected without the hassle of wires...</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card2">
+            <img src="{% static 'images/sl2.webp' %}">
+            <h1>Sleek and Stylish Smartwatches</h1>
+<p>Discover smartwatches that combine sleek design with high-performance features...</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card3">
+            <img src="{% static 'images/sl3.webp' %}">
+            <h1>Sleek and Stylish Neckband</h1>
+<p>Discover Neckband devices that combine sleek design with high-performance audio...</p>
+
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card4">
+            <img src="{% static 'images/sl4.webp' %}">
+            <h1>Seamless Connectivity for Smartwatches</h1>
+            <p>Experience seamless connectivity and ease of use with our Smartwatches...</p>
+        </div>
+    </div>
+</div>
+
+<!-- slider 2 pagination -->
+
+<div class="advantages-container">
+    <div class="advantage-card">
+        <div class="advantage-content">
+            <h1>Ultimate Comfort</h1>
+            <p>Experience unparalleled comfort with Airdopes. Our ergonomic design ensures a perfect fit, allowing you to enjoy long hours of wireless audio without any discomfort.</p>
+            <button>Explore</button>
+        </div>
+    </div>
+  
+    <div class="advantage-card">
+        <div class="advantage-content">
+            <h1>Exceptional Sound Quality</h1>
+            <p>Delve into a world of extraordinary sound quality with Airdopes. Immerse yourself in rich, high-definition audio that brings your music to life.</p>
+            <button>Explore</button>
+        </div>
+    </div>
+  
+    <div class="advantage-card">
+        <div class="advantage-content">
+            <h1>Chic and Trendy Design</h1>
+            <p>Discover Airdopes with chic and trendy designs that complement your unique style. Elevate your fashion game while enjoying top-notch audio.</p>
+            <button>Explore</button>
+        </div>
+    </div>
+  
+    <div class="advantage-card">
+        <div class="advantage-content">
+            <h1>Effortless Pairing</h1>
+            <p>Experience hassle-free pairing and seamless connectivity with Airdopes. Stay effortlessly connected to your devices wherever you go.</p>
+            <button>Explore</button>
+        </div>
+    </div>
+  </div>
+  
+
+<!-- slider 2 pagination -->
+
+
+<section style="position: relative; margin-top: 5%;">
+  <div style="position: relative;">
+      <img src="{% static 'images/girl (2).jpg' %}" alt="Airdopes in Action" style="width: 100%; height: auto;">
+      <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+  </div>
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; z-index: 1;">
+      <h1>Experience Wireless Audio Excellence</h1>
+      <p>Discover a world of wireless audio excellence with our Airdopes that redefine your music experience.</p>
+      <button style="background-color: #55186f; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Explore Airdopes</button>
+  </div>
+</section>
+
+ 
+
+      {% endblock %}
+
+
+      <!-- footer -->
+
+      <footer class="footer">
+        <h1 class="footer__logo" style="font-family: 'Helvetica Neue', sans-serif; font-size:px; font-weight: bold; letter-spacing: -2px; color: #ff6f61; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); background-image: linear-gradient(45deg, #ff6f61, #ffbb73); -webkit-background-clip: text; color: transparent;">AEROBEATS</h1>
+        
+        <div class="footer__addr">
+            <h2>Contact</h2>
+            <address>
+                78 Street<br>
+                MOP, Mumbai 23922<br>
+                <a class="footer__btn" href="mailto:contact@aerobeats.com">Email Us</a>
+            </address>
+        </div>    
+            <div class="nav__item">
+                <h2 class="nav__title">Support</h2>
+                <ul class="nav__ul">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Warranty Information</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="legal">
+            <p>&copy; 2023 Airdopes. All rights reserved.</p>
+            <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> for music lovers</span>
+            </div>
+        </div>
+    </footer>

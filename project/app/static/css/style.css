@@ -1,0 +1,843 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Updated CSS for the navigation bar */
+.navbar {
+  background-color: #55186f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+  background-color: #555;
+}
+
+/* Style for the dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+/* Style for the search bar */
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #777;
+}
+
+/* Style for the logo */
+.logo {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px; /* Add margin to create space between logo and links */
+}
+
+/* slider 2  */
+
+/* CSS for the advantages container */
+.advantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CSS for individual advantage cards */
+.advantage-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(50% - 20px);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+}
+
+.advantage-content {
+  margin-bottom: 20px;
+}
+
+.advantage-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.advantage-content p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Button styling */
+.advantage-content button {
+  padding: 10px 20px;
+  background-color: #55186f;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.advantage-content button:hover {
+  background-color: #55186f;
+}
+
+
+/* slider 2 end */
+
+/* mycart */
+
+/* contact us */
+
+.custom-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.custom-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-form-group {
+  margin-bottom: 15px;
+}
+
+.custom-label {
+  font-weight: bold;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-textarea {
+  resize: vertical;
+}
+
+.custom-submit-btn {
+  background-color: #55186f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-submit-btn:hover {
+  background-color: #55186f;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header section */
+.image-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.content-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.content-overlay p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #55186f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #55186f;
+}
+
+/* Card section */
+.carda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+}
+
+.card p {
+  font-size: 1rem;
+  padding: 0 20px 20px;
+}
+
+.card button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #55186f;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #55186f;
+}
+
+/* Content section */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.content .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content .text {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.content .text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.content .text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.content .text button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #55186f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.content .text button:hover {
+  background-color: #55186f;
+}
+
+
+/* shop pagination */
+
+/* CSS for the item container */
+/* CSS for the item container */
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CSS for individual items */
+.item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: calc(20% - 20px);
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.item p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+/* Form styling */
+.item form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.item input[type="number"] {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.item input[type="hidden"] {
+  display: none;
+}
+
+.item input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #55186f;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item input[type="submit"]:hover {
+  background-color: #55186f;
+}
+
+/* Message styling */
+.msg {
+  background-color: #28a745;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+/* shop end */
+
+/* pagination */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Pagination styles */
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.pagination li {
+  margin-right: 5px;
+}
+
+.pagination a {
+  text-decoration: none;
+  background-color: #55186f;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.pagination a:hover {
+  background-color: #55186f;
+}
+
+/* pagination end */
+
+/* footer */
+
+/* contact  */
+
+/* CSS styles for the my-container */
+.my-container {
+  width: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #f2f2f2;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners for the container */
+}
+
+/* CSS styles for the my-heading */
+.my-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* CSS styles for the my-form */
+.my-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* CSS styles for the my-input and my-textarea */
+.my-input,
+.my-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; /* Increased spacing between form elements */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners for input and textarea */
+}
+
+/* CSS styles for the my-input and my-textarea when focused */
+.my-input:focus,
+.my-textarea:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Change border color when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow */
+}
+
+/* CSS styles for the my-submit-button */
+.my-submit-button {
+  width: 100%;
+  padding: 15px; /* Increased padding for button */
+  background-color: #55186f;
+  color: #fff;
+  border: none;
+  border-radius: 10px; /* Rounded corners for button */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition */
+}
+
+/* Hover effect for the my-submit-button */
+.my-submit-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* contact */
+
+/* display */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.product-item img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  margin: 5px 0;
+}
+/* display */
+
+/* footer */
+
+.footer {
+  background-color: #55186f;
+  color: #fff;
+  padding: 30px 20px;
+  border-top: 1px solid #555;
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__addr h2 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer__btn:hover {
+  background-color: #ff504b;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.nav__item {
+  margin: 0 1rem;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.nav__ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav__ul a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.legal {
+  color: #999;
+  margin-top: 2rem;
+}
+
+.legal__links {
+  margin-top: 1rem;
+}
+
+.heart {
+  color: #ff6f61;
+}
+
+/* cart */
+/* Style for the table container */
+/* Style for the table container */
+.order-table-container {
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+/* Style for the table */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #f2f2f2;
+}
+
+/* Style for the product image */
+.order-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Style for the table cells containing price, quantity, and total */
+.order-td {
+  font-size: 16px;
+  vertical-align: middle; /* Vertically center content */
+}
+
+/* Style for the total section */
+.order-total-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.order-total-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* login form */
+
+
+/* Apply styles to the container div */
+.price-filter {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Style the number input fields */
+.min-input,
+.max-input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* payment gatway css */
+
+.order-total-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style for the order total text */
+.order-total-text {
+  font-size: 24px;
+  color: #333; /* Change the color to your preference */
+}
+
+/* Style for the form container */
+form {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style for the table (if needed) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for the form button */
+button[type="submit"] {
+  background-color: #242298; /* Change the background color to your preference */
+  color: #fff; /* Change the text color to your preference */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the Razorpay payment container (if needed) */
+.razorpay-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* paymnt status */
+.payment-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Custom heading styles */
+.payment-status {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Custom button styles */
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Center the button horizontally */
+.text-center {
+  text-align: center;
+}
+
+

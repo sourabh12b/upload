@@ -1,0 +1,87 @@
+{% extends 'app/index.html' %}
+
+{% block one %}
+<style>
+    .container {
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        min-height: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .container a {
+        text-decoration: none;
+        margin: 0 10px;
+        color: #55186f;
+        font-weight: bold;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        height: -40vh;
+    }
+
+    .form-label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .signup-button {
+        background-color: #55186f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .signup-button:hover {
+        background-color: #55186f;
+    }
+
+    .error-message {
+        color: #ff0000;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="container">
+    <a href="{% url 'log' %}">Login</a>
+    <a href="{% url 'logout' %}">Logout</a>
+
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        
+        {% for i in fm %}
+            <div class="form-group">
+                <label for="{{ i.id_for_label }}" class="form-label">{{ i.label_tag }}</label>
+                {{ i }}
+                <p class="error-message">{{ i.errors | striptags }}</p>
+            </div>
+        {% endfor %}
+        
+        <input type="submit" value="signup" class="signup-button">
+    </form>
+</div>
+{% for i in messages %}
+
+{{i}}
+
+{%  endfor %}
+
+    
+{% endblock %}
